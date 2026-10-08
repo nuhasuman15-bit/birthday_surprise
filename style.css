@@ -1,0 +1,197 @@
+/* Soft blush, cream, white palette
+   Change colors below to personalize */
+:root{
+  --bg:#fff7f8;
+  --pink:#ffbfd2;
+  --blush:#ffdce6;
+  --cream:#fff7ee;
+  --glass: rgba(255,255,255,0.6);
+  --accent:#ff6b81;
+  --muted:#8b6f72;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family: 'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', Arial; background:linear-gradient(180deg,var(--bg),var(--cream));color:#3a2b2d}
+.bg{position:fixed;inset:0;overflow:hidden;pointer-events:none}
+.panel{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:4rem 1.25rem}
+.card{max-width:900px;width:100%;padding:2rem;border-radius:18px;background:linear-gradient(180deg,rgba(255,255,255,0.75),rgba(255,255,255,0.6));box-shadow:0 8px 30px rgba(70,40,60,0.08);backdrop-filter: blur(8px);border:1px solid rgba(255,255,255,0.6)}
+.glass{background:linear-gradient(180deg,rgba(255,255,255,0.65),rgba(255,255,255,0.5));box-shadow:0 10px 40px rgba(150,90,110,0.08);}
+.center{text-align:center}
+/* Welcome title styling: elegant script, burgundy, soft glow */
+#welcomeTitle{font-family: 'Great Vibes', cursive; color:#4a0f1c; font-size:2.6rem; font-weight:600; letter-spacing:0.6px; text-shadow:0 6px 18px rgba(74,15,28,0.12), 0 1px 0 rgba(255,255,255,0.25); margin-bottom:6px}
+/* welcome paragraph styling for mobile readability */
+#welcomeText{color:#4a0f1c; font-weight:600; line-height:1.5; font-size:1.05rem; max-width:40ch; margin:0 auto 0.8rem; text-align:center; text-shadow:0 4px 14px rgba(74,15,28,0.06)}
+
+@media (max-width:600px){
+  #welcomeTitle{font-size:2.2rem}
+  #welcomeText{font-size:1.05rem;line-height:1.6;padding:0 6px}
+}
+
+/* Our Story: use Cormorant Garamond and glassmorphism */
+#story .card{font-family: 'Cormorant Garamond', serif}
+#story h2{font-weight:600;color:#4a0f1c}
+#story .muted{color:#4a0f1c}
+#timeline .timeline-item{background:transparent;border:none;padding:0;margin:0 0 .8rem;font-weight:600;color:#4a0f1c}
+.story-card{margin-top:1rem;background:linear-gradient(180deg,rgba(255,255,255,0.7),rgba(255,250,250,0.6));border-radius:14px;padding:1.2rem;border:1px solid rgba(200,160,170,0.45);box-shadow:0 10px 30px rgba(150,80,110,0.06);}
+.story-card p{margin:0;color:#4a0f1c;font-size:1.05rem;line-height:1.65;font-weight:500}
+
+@media (max-width:600px){
+  #story .card{padding:1rem}
+  .story-card{padding:1rem}
+  .story-card p{font-size:1rem}
+}
+
+/* Memories section typography and caption styling */
+#memories .card{font-family: 'Cormorant Garamond', serif}
+#memories h2{font-family: 'Cormorant Garamond', serif; font-weight:700; color:#4a0f1c; font-size:1.6rem; text-shadow:0 6px 14px rgba(74,15,28,0.06); margin-bottom:0.25rem}
+#memories .muted{color:#4a0f1c; font-weight:600; margin-bottom:0.8rem}
+#gallery .photo figcaption{font-family: 'Cormorant Garamond', serif; color:#4a0f1c; font-weight:600; padding:.8rem; font-size:1rem; line-height:1.4}
+
+@media (max-width:600px){
+  #memories h2{font-size:1.4rem}
+  #gallery .photo figcaption{font-size:0.98rem}
+}
+
+@media (max-width:420px){
+  #gallery{grid-template-columns:1fr}
+  #gallery .photo img{height:160px}
+}
+/* buttons row */
+.btn-row{display:flex;gap:.6rem;justify-content:center;margin-top:1rem}
+.actions{margin-top:1rem;display:flex;justify-content:center;gap:.6rem}
+h1{font-size:1.8rem;margin:0 0 .25rem}
+h2{font-size:1.15rem;margin:0 0 1rem;color:var(--accent)}
+.big{font-size:2.2rem;letter-spacing:1px}
+.muted{color:var(--muted)}
+.btn{appearance:none;border:0;padding:.8rem 1.1rem;border-radius:12px;background:transparent;cursor:pointer;transition:all .28s}
+.btn.primary{background:linear-gradient(90deg,var(--pink),var(--blush));color:#5a1f31;font-weight:600;box-shadow:0 6px 18px rgba(255,110,140,0.18)}
+.btn.small{padding:.5rem .7rem;border-radius:10px}
+.row{display:flex;gap:.5rem;align-items:center}
+input[type=text],textarea,input{padding:.75rem;border-radius:10px;border:1px solid rgba(200,160,170,0.6);width:100%;font-family:inherit}
+textarea{min-height:160px;font-family: 'Segoe UI', cursive;background:transparent}
+.timeline-item{background:linear-gradient(180deg,#fff,#fff0);padding:.9rem;border-radius:12px;margin-bottom:.6rem;border:1px solid rgba(220,190,200,0.5)}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.photo{border-radius:12px;overflow:hidden;background:linear-gradient(180deg,rgba(255,255,255,0.8),rgba(255,255,255,0.6));border:1px solid rgba(200,160,170,0.4)}
+.photo img{width:100%;height:160px;object-fit:cover;display:block}
+.photo figcaption{padding:.6rem;font-size:.95rem}
+.love-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:1rem}
+.love-card{padding:1rem;border-radius:14px;background:linear-gradient(180deg,var(--blush),#fff);text-align:center;box-shadow:0 6px 20px rgba(230,120,140,0.08);transition:transform .28s,box-shadow .28s}
+.love-card:hover{transform:translateY(-6px);box-shadow:0 14px 40px rgba(230,120,140,0.12)}
+.letter-card{font-family: 'Dancing Script', 'Segoe UI', cursive;padding:2rem;position:relative}
+.signature{margin-top:1rem;text-align:right;font-weight:700}
+.gift{width:160px;height:140px;position:relative;cursor:pointer;margin:1rem auto;filter:drop-shadow(0 8px 18px rgba(255,110,140,0.12))}
+.gift .box{position:absolute;left:0;right:0;bottom:0;height:80%;background:linear-gradient(180deg,var(--accent),#ff8aa2);border-radius:12px}
+.gift .lid{position:absolute;left:10px;right:10px;top:-16px;height:44px;background:linear-gradient(90deg,#fff0,var(--pink));border-radius:10px;transform-origin:center;transition:transform .5s}
+.gift.open .lid{transform:translateY(-28px) rotate(-15deg)}
+.gift.open .box{transform:translateY(-20px) scale(1.02);transition:transform .6s}
+.music-controls{position:fixed;right:14px;bottom:14px}
+.panel:not(.active){opacity:0;transform:translateY(12px);pointer-events:none}
+.panel.active{opacity:1;transform:none}
+#confetti{position:absolute;inset:0;pointer-events:none}
+/* reveal/fade animations */
+.panel{opacity:0;transform:translateY(12px);transition:opacity .6s ease,transform .6s ease}
+.panel.active{opacity:1;transform:none}
+.confetti-piece{position:absolute;border-radius:2px}
+
+/* final confetti container */
+#finalConfetti{position:absolute;inset:0;pointer-events:none}
+/* Final balloon surprise */
+#balloons .balloon-card{max-width:1040px;overflow:hidden}
+.balloon-eyebrow{margin:0 0 .45rem;color:#a65f70;font-size:.72rem;font-weight:700;letter-spacing:2px}
+#balloons h2{color:#4a0f1c;font-family:'Cormorant Garamond',serif;font-size:2rem;margin-bottom:.35rem}
+#balloons .card>.muted{margin:.2rem 0 1rem;color:#77535b}
+.balloon-row{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;align-items:stretch;margin-top:1.4rem}
+.balloon-stop{display:grid;grid-template-columns:minmax(0,1fr);justify-items:center;min-width:0;min-height:226px;position:relative}
+.balloon{grid-area:1/1;align-self:start;position:relative;width:78px;height:102px;margin:20px 0 0;border:0;border-radius:50% 50% 48% 48%/58% 58% 42% 42%;background:radial-gradient(ellipse at 31% 22%,rgba(255,255,255,.92) 0 5%,transparent 6%),linear-gradient(135deg,#fff0f4 2%,#ffc5d4 44%,#e77e9a 100%);box-shadow:inset -8px -10px 15px rgba(160,48,81,.16),inset 5px 7px 12px rgba(255,255,255,.78),0 12px 22px rgba(142,58,82,.15);color:#681d32;cursor:pointer;transition:transform .22s ease,opacity .22s ease,filter .22s ease;touch-action:manipulation}
+.balloon::before{content:'';position:absolute;top:15px;left:15px;width:14px;height:25px;border-radius:50%;background:rgba(255,255,255,.66);filter:blur(1px);transform:rotate(28deg)}
+.balloon::after{content:'';position:absolute;left:50%;bottom:-28px;width:2px;height:28px;background:linear-gradient(#dc7892,#f2b5c2);transform:translateX(-50%)}
+.balloon .label{position:absolute;inset:0;display:grid;place-items:center;font-family:'Cormorant Garamond',serif;font-size:1.45rem;font-weight:700;text-shadow:0 1px rgba(255,255,255,.8)}
+.balloon:hover:not(:disabled){transform:translateY(-7px) rotate(-3deg);filter:saturate(1.08)}
+.balloon:focus-visible{outline:3px solid #8d354e;outline-offset:5px}
+.balloon:disabled{cursor:default;filter:saturate(.65);opacity:.72}
+.balloon.is-popping{animation:balloon-pop .42s ease-in forwards;pointer-events:none}
+.balloon-result{grid-area:1/1;align-self:start;width:100%;max-width:170px;margin:0;padding:7px;border:1px solid rgba(255,255,255,.85);border-radius:14px;background:rgba(255,255,255,.62);box-shadow:0 10px 26px rgba(106,37,58,.12);opacity:0;visibility:hidden;transform:translateY(10px) scale(.96);transition:opacity .35s ease,transform .35s ease,visibility .35s;backdrop-filter:blur(12px)}
+.balloon-stop.is-revealed .balloon{display:none}
+.balloon-stop.is-revealed .balloon-result{opacity:1;visibility:visible;transform:none}
+.balloon-result img{display:block;width:100%;height:128px;aspect-ratio:auto;object-fit:contain;border-radius:9px;background:linear-gradient(135deg,#fff3f5,#f8dce2)}
+.balloon-result figcaption{padding:8px 2px 3px;color:#591b2d;font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:700;line-height:1.2}
+.gif-fallback{display:none;padding:15px 5px;color:#77535b;font-size:.85rem;line-height:1.4}
+.balloon-result.gif-missing img{display:none}
+.balloon-result.gif-missing .gif-fallback{display:block}
+.balloon-final{position:relative;display:none;isolation:isolate;overflow:hidden;margin:1rem -1rem -1rem;padding:2.2rem 1rem 1.5rem;border-radius:18px;background:linear-gradient(135deg,rgba(255,235,240,.82),rgba(255,250,245,.88));color:#4a0f1c}
+.balloon-final.is-visible{display:block;animation:balloon-reveal .9s cubic-bezier(.2,.8,.2,1) both}
+.balloon-final h1,.balloon-final p{position:relative;z-index:1}
+.balloon-final h1{font-family:'Great Vibes',cursive;font-size:2.8rem;font-weight:600}
+.balloon-final p{margin:.5rem 0 0;font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:700}
+.balloon-confetti,.balloon-hearts{position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none}
+.balloon-confetti .confetti-piece{animation-duration:4.5s!important}
+.balloon-heart{position:absolute;bottom:-24px;color:#e77e9a;font-size:20px;animation:heart-rise 4.5s ease-in infinite;filter:drop-shadow(0 2px 3px rgba(106,37,58,.16))}
+@keyframes balloon-pop{35%{transform:scale(1.18);filter:brightness(1.16)}100%{transform:scale(.05);opacity:0}}
+@keyframes balloon-reveal{from{opacity:0;transform:translateY(16px) scale(.97)}to{opacity:1;transform:none}}
+@keyframes heart-rise{0%{opacity:0;transform:translateY(0) rotate(-12deg) scale(.65)}15%{opacity:.9}100%{opacity:0;transform:translateY(-230px) rotate(18deg) scale(1.15)}}
+@media (max-width:760px){.balloon-row{grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.balloon-stop{min-height:210px}}
+@media (max-width:460px){#balloons .balloon-card{padding:1.2rem .85rem}.balloon-row{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.balloon-stop{min-height:202px}.balloon{width:68px;height:90px}.balloon-result{max-width:160px}.balloon-final{margin:1rem -.3rem -.3rem;padding:1.8rem .5rem 1.2rem}.balloon-final h1{font-size:2.2rem}}
+@media (prefers-reduced-motion:reduce){.balloon,.balloon-result,.balloon-final{transition:none}.balloon.is-popping,.balloon-final.is-visible,.balloon-heart{animation-duration:.01ms!important;animation-iteration-count:1!important}}
+/* Floating hearts */
+#hearts{position:absolute;inset:0}
+.heart{position:absolute;width:14px;height:14px;background:var(--accent);transform:rotate(-45deg);border-radius:3px;opacity:.9}
+.heart:before,.heart:after{content:'';position:absolute;width:14px;height:14px;background:var(--accent);border-radius:50%}
+.heart:before{top:-7px;left:0}
+.heart:after{left:7px;top:0}
+/* sparkles */
+#sparkles{position:absolute;inset:0}
+.spark{position:absolute;width:6px;height:6px;border-radius:50%;background:linear-gradient(90deg,#fff,#ffd6e0);filter:blur(.4px);}
+
+/* responsive */
+@media (max-width:800px){
+  .love-grid{grid-template-columns:repeat(2,1fr)}
+  h1{font-size:1.5rem}
+}
+@media (max-width:420px){
+  .gallery{grid-template-columns:1fr}
+  .love-grid{grid-template-columns:1fr}
+  .card{padding:1.2rem;border-radius:14px}
+}
+
+/* Slightly shorter landscape on larger screens for balance */
+
+/* subtle animations */
+.card{transition:transform .35s,box-shadow .35s}
+.card:hover{transform:translateY(-6px)}
+
+/* beginner notes */
+/* Change the date in index.html at #relationDate
+   Replace images in images/ (photo1.jpg etc.)
+   Edit letter in #letterText
+   Replace music.mp3 file in the root to change song */
+
+/* --- FORCE 3-COLUMN GALLERY OVERRIDES (placed last to ensure precedence) --- */
+/* Keep the gallery as 3 columns on all screen sizes and make images uniform */
+#gallery.gallery {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 12px !important;
+  width: 100% !important;
+}
+
+#gallery.gallery .photo {
+  width: 100% !important;
+  margin: 0 !important;
+}
+
+#gallery.gallery .photo img {
+  width: 100% !important;
+  height: 160px !important;
+  object-fit: cover !important;
+  display: block !important;
+}
+
+/* Remove or override any media queries that attempted to change the gallery columns */
+@media (max-width: 1200px) {
+  #gallery.gallery { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
+}
+@media (max-width: 800px) {
+  #gallery.gallery { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
+}
+@media (max-width: 420px) {
+  #gallery.gallery { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
+}

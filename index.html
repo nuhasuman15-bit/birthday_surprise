@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Happy Birthday ♥</title>
+  <link rel="stylesheet" href="style.css">
+ <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="bg">
+    <div id="hearts"></div>
+    <div id="sparkles"></div>
+  </div>
+
+  <!-- Welcome Screen -->
+  <section id="welcome" class="panel active">
+    <div class="card glass center">
+        <h1 id="welcomeTitle">Hey Babe <span>❤️</span></h1>
+          <p id="welcomeText" class="muted">I made a little something special for you… 🥹❤️<br>
+          It may not be a big gift, but every little part of this is made with love.<br>
+          So stay till the end, okay? 🫶🏻<br>
+          Because this little surprise is only for you, Babe. 💗</p>
+      <button id="openBtn" class="btn primary">OPEN MY SURPRISE 💌</button>
+    </div>
+  </section>
+
+  <!-- Reveal -->
+  <section id="reveal" class="panel">
+    <div class="card glass center">
+      <h1 class="big">HAPPY BIRTHDAY <span>❤️</span></h1>
+      <h2>To My Favourite Person </h2>
+      <div id="confetti"></div>
+      <div class="btn-row">
+        <button class="btn" data-scroll-to="story">Our Story</button>
+        <button class="btn next" data-scroll-to="story">Continue ➜</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Story -->
+  <section id="story" class="panel">
+    <div class="card">
+      <h2>Our Story</h2>
+      <p class="muted">Relationship date - <span id="relationDate">14 May 2020</span></p>
+      <div id="timeline">
+        <!-- Editable timeline entries (updated) -->
+        <div class="timeline-item">14 May 2020 — The day our story began ❤️</div>
+      </div>
+
+      <div class="story-card">
+        <p>
+          We met on 14 May 2020, during Ramadan. I still remember that time so clearly. Somehow, in the middle of such a difficult and lonely period, Allah brought you into my life, and that became one of the happiest things that happened to me.
+Honestly, I was feeling very low and lonely at that time. Lockdown had made everything even harder, and I had no one to really talk to. I used to make a dua to Allah that someday He would send someone into my life who would truly love me and stay by my side.
+And then you came into my life. ❤️
+I will never forget that evening. It was around 7 PM when you messaged me at 7:03, and I replied at 7:05. 🥹 I never knew that such a simple message would become the beginning of something so beautiful.
+I am genuinely so grateful that you came into my life. Thank you for finding me when I was feeling so alone. Thank you for staying with me, loving me, and being a part of my life.
+Sometimes I think about what my life would have been like if you had never come, or if you had never proposed to me. Maybe things would have been completely different. But Allah knew exactly what I needed, and He sent you to me at a time when I needed someone the most. ❤️
+I can say “thank you” a thousand times, and it still wouldn't be enough. And no matter how much I say Alhamdulillah and thank Allah for bringing you into my life, it will never feel like enough.
+That evening, that message, and the moment you came into my life… I will never forget them. ❤️
+        <button class="btn next" data-scroll-to="memories">Next: Memories ➜</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Memories -->
+  <section id="memories" class="panel">
+    <div class="card">
+      <h2>Memories</h2>
+      <p class="muted">.</p>
+      <div id="gallery" class="gallery">
+        <figure class="photo">
+          <img src="image/photo1.jpg" alt="photo1">
+            <h2>Memories With You ❤️</h2>
+            <p class="muted">Click the captions to edit your memories ❤️</p>
+        <figure class="photo">
+          <img src="image/photo2.jpg" alt="photo2">
+          <figcaption contenteditable="true"> The day we first met</figcaption>
+        </figure>
+        <figure class="photo">
+          <img src="image/photo3.jpg" alt="photo3">
+          <figcaption contenteditable="true"> The last we met</figcaption>
+        </figure>
+      </div>
+      <div class="actions">
+        <button class="btn next" data-scroll-to="love">Next: Things I Love ➜</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Things I Love -->
+  <section id="love" class="panel">
+    <div class="card">
+      <h2>Things I Love About You</h2>
+      <div class="love-grid">
+        <div class="love-card">Your Smile</div>
+        <div class="love-card">How you care</div>
+        <div class="love-card">Your voice</div>
+        <div class="love-card">The way you make me laugh</div>
+        <div class="love-card"> How you undertand me</div>
+        <div class="love-card">Your patience with me</div>
+        <div class="love-card">The way you love</div>
+        <div class="love-card">You stayed when  needed you</div>
+        <div class="love-card">Your random talks</div>
+      </div>
+      <div class="actions">
+        <button class="btn next" data-scroll-to="distance">Next: Long Distance ➜</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Long Distance -->
+  <section id="distance" class="panel">
+    <div class="card glass">
+      <h2>Long Distance</h2>
+      <p class="muted">Miles Apart, Hearts Together ❤️</p>
+      <p class="big italic">You went abroad for work, not because you wanted to be away from me, but because you wanted to build a better future for us. 🥹❤️ I know being far away from each other isn't easy, and there are so many days when I miss you terribly. But I'm proud of you for working hard and chasing our dreams. Every mile between us reminds me of how much we love each other. One day, all this distance will be worth it, and we'll look back at these days and say, “We made it together.” ❤️ <span>❤️</span></p>
+      <div class="actions">
+        <button class="btn next" data-scroll-to="letter">Next: Letter ➜</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Letter -->
+  <section id="letter" class="panel">
+    <div class="card letter-card">
+      <h2>Birthday Letter</h2>
+      <textarea id="letterText">Happy birthday my love,
+
+Happy Birthday, my love ❤️
+Today is your special day, but honestly, I feel like I am the lucky one because I got you in my life. 🥹❤️
+From the day you came into my life, you have given me so many memories, smiles, fights, laughs, and moments that I will always keep close to my heart. Sometimes I still can't believe that one simple message on that evening became such an important part of my life.
+I know things aren't always easy for us, especially now that we are miles apart. I miss you, I miss talking to you, and I miss having you close to me. But I know you went abroad to work hard and build a better future for us. And for that, I am truly proud of you. ❤️
+I don't know what the future holds, but I know one thing — I want to keep making memories with you. I want to see you achieve everything you dream of, and I want to be there beside you through all the good and difficult days.
+Thank you for coming into my life. Thank you for staying. Thank you for loving me in your own way. And thank you for being you. 🥹❤️
+On your birthday, I just want to wish you happiness, success, good health, and everything your heart wishes for.
+May Allah always protect you, guide you, and bless everything you do. 🤍
+No matter how many miles are between us, you will always have a special place in my heart.
+Happy Birthday once again, Babe. ❤️
+I love you more than words can ever explain. 🥹❤️
+Forever yours,
+Nuha ❤️</textarea>
+      <div class="signature">Nuha ❤️</div>
+      <div class="actions">
+        <button class="btn next" data-scroll-to="gift">Next: Gift ➜</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gift -->
+  <section id="gift" class="panel">
+    <div class="card center">
+      <div id="giftBox" class="gift">
+        <div class="lid"></div>
+        <div class="box"></div>
+      </div>
+      <div class="actions">
+        <button id="openGift" class="btn primary small">Open Gift 🎁</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final Message -->
+  <section id="final" class="panel">
+    <div class="card glass center">
+      <h1 class="big">Happy Birthday, My Love <span>❤️</span></h1>
+      <p class="muted">Even miles apart, you will always have my heart.</p>
+      <h2>I LOVE YOU <span>❤️</span></h2>
+      <div class="actions">
+        <button class="btn next" data-scroll-to="balloons">Continue: Balloon Surprise 🎈</button>
+        <button class="btn" id="replay">Replay Surprise ✨</button>
+      </div>
+      <div id="finalConfetti"></div>
+    </div>
+  </section>
+
+  <!-- Balloon Surprise (final interactive section) -->
+  <section id="balloons" class="panel">
+    <div class="card glass center balloon-card">
+      <p class="balloon-eyebrow">A LITTLE MORE LOVE</p>
+      <h2>Balloon Surprise 🎈</h2>
+      <p class="muted">Pop them one by one, my love.</p>
+      <div id="balloonRow" class="balloon-row">
+        <div class="balloon-stop">
+          <button class="balloon" type="button" data-index="1" aria-label="Pop balloon 1"><span class="label">1</span></button>
+          <figure class="balloon-result" aria-hidden="true">
+            <img src="image/gif1.gif" alt="You make me smile">
+            <figcaption>You make me smile ❤️</figcaption>
+            <span class="gif-fallback" role="status">Add image/gif1.gif to show this surprise.</span>
+          </figure>
+        </div>
+        <div class="balloon-stop">
+          <button class="balloon" type="button" data-index="2" aria-label="Pop balloon 2" disabled><span class="label">2</span></button>
+          <figure class="balloon-result" aria-hidden="true">
+            <img src="image/gif2.gif" alt="My favourite person">
+            <figcaption>I MISS YOU 🥹❤️</figcaption>
+            <span class="gif-fallback" role="status">Add image/gif2.gif to show this surprise.</span>
+          </figure>
+        </div>
+        <div class="balloon-stop">
+          <button class="balloon" type="button" data-index="3" aria-label="Pop balloon 3" disabled><span class="label">3</span></button>
+          <figure class="balloon-result" aria-hidden="true">
+            <img src="image/gif3.gif" alt="Thank you for choosing me">
+            <figcaption>Thank you for choosing me 💗</figcaption>
+            <span class="gif-fallback" role="status">Add image/gif3.gif to show this surprise.</span>
+          </figure>
+        </div>
+        <div class="balloon-stop">
+          <button class="balloon" type="button" data-index="4" aria-label="Pop balloon 4" disabled><span class="label">4</span></button>
+          <figure class="balloon-result" aria-hidden="true">
+            <img src="image/gif4.gif" alt="Forever us">
+            <figcaption> WILL YOU MARRY ME♾️❤️</figcaption>
+            <span class="gif-fallback" role="status">Add image/gif4.gif to show this surprise.</span>
+          </figure>
+        </div>
+        <div class="balloon-stop">
+          <button class="balloon" type="button" data-index="5" aria-label="Pop balloon 5" disabled><span class="label">5</span></button>
+          <figure class="balloon-result" aria-hidden="true">
+            <img src="image/gif5.gif" alt="I love you, babe">
+            <figcaption>I LOVE YOU, BABE ❤️</figcaption>
+            <span class="gif-fallback" role="status">Add image/gif5.gif to show this surprise.</span>
+          </figure>
+        </div>
+      </div>
+      <div id="balloonFinal" class="balloon-final" aria-live="polite" aria-hidden="true">
+        <div id="balloonConfetti" class="balloon-confetti" aria-hidden="true"></div>
+        <h1>HAPPY BIRTHDAY, MY LOVE ❤️</h1>
+        <p>YOU + ME = FOREVER ♾️</p>
+        <div id="balloonHearts" class="balloon-hearts" aria-hidden="true"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Music Control -->
+  <div class="music-controls">
+    <audio id="bgMusic" src="music.mp3"></audio>
+    <button id="playMusic" class="btn small">Play Music ▶</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
