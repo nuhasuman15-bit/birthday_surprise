@@ -53,7 +53,7 @@ html,body{height:100%;margin:0;font-family: 'Segoe UI', system-ui, -apple-system
 
 @media (max-width:420px){
   #gallery{grid-template-columns:1fr}
-  #gallery .photo img{height:160px}
+  #gallery .photo img{height:min(75vh, 650px)}
 }
 /* buttons row */
 .btn-row{display:flex;gap:.6rem;justify-content:center;margin-top:1rem}
@@ -71,7 +71,7 @@ textarea{min-height:160px;font-family: 'Segoe UI', cursive;background:transparen
 .timeline-item{background:linear-gradient(180deg,#fff,#fff0);padding:.9rem;border-radius:12px;margin-bottom:.6rem;border:1px solid rgba(220,190,200,0.5)}
 .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
 .photo{border-radius:12px;overflow:hidden;background:linear-gradient(180deg,rgba(255,255,255,0.8),rgba(255,255,255,0.6));border:1px solid rgba(200,160,170,0.4)}
-.photo img{width:100%;height:160px;object-fit:cover;display:block}
+.photo img{width:100%;height:min(75vh, 650px);object-fit:contain;display:block;margin:0 auto}
 .photo figcaption{padding:.6rem;font-size:.95rem}
 .love-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:1rem}
 .love-card{padding:1rem;border-radius:14px;background:linear-gradient(180deg,var(--blush),#fff);text-align:center;box-shadow:0 6px 20px rgba(230,120,140,0.08);transition:transform .28s,box-shadow .28s}
@@ -130,6 +130,7 @@ textarea{min-height:160px;font-family: 'Segoe UI', cursive;background:transparen
 @keyframes heart-rise{0%{opacity:0;transform:translateY(0) rotate(-12deg) scale(.65)}15%{opacity:.9}100%{opacity:0;transform:translateY(-230px) rotate(18deg) scale(1.15)}}
 @media (max-width:760px){.balloon-row{grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.balloon-stop{min-height:210px}}
 @media (max-width:460px){#balloons .balloon-card{padding:1.2rem .85rem}.balloon-row{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.balloon-stop{min-height:202px}.balloon{width:68px;height:90px}.balloon-result{max-width:160px}.balloon-final{margin:1rem -.3rem -.3rem;padding:1.8rem .5rem 1.2rem}.balloon-final h1{font-size:2.2rem}}
+@media (max-width:600px){.balloon-row{grid-template-columns:1fr}.balloon-stop{min-height:0}.balloon-result{width:100%;max-width:none}.balloon-result img{height:min(65vh, 480px)}}
 @media (prefers-reduced-motion:reduce){.balloon,.balloon-result,.balloon-final{transition:none}.balloon.is-popping,.balloon-final.is-visible,.balloon-heart{animation-duration:.01ms!important;animation-iteration-count:1!important}}
 /* Floating hearts */
 #hearts{position:absolute;inset:0}
@@ -160,15 +161,14 @@ textarea{min-height:160px;font-family: 'Segoe UI', cursive;background:transparen
 
 /* beginner notes */
 /* Change the date in index.html at #relationDate
-   Replace images in images/ (photo1.jpg etc.)
-   Edit letter in #letterText
-   Replace music.mp3 file in the root to change song */
+  Replace images in image/ (photo1.jpg etc.)
+  Edit letter in #letterText
+  Replace music.mp3 file in the root to change song */
 
-/* --- FORCE 3-COLUMN GALLERY OVERRIDES (placed last to ensure precedence) --- */
-/* Keep the gallery as 3 columns on all screen sizes and make images uniform */
+/* Keep gallery photos stacked and fitted to the available width */
 #gallery.gallery {
   display: grid !important;
-  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  grid-template-columns: 1fr !important;
   gap: 12px !important;
   width: 100% !important;
 }
@@ -180,18 +180,9 @@ textarea{min-height:160px;font-family: 'Segoe UI', cursive;background:transparen
 
 #gallery.gallery .photo img {
   width: 100% !important;
-  height: 160px !important;
-  object-fit: cover !important;
+  height: min(75vh, 650px) !important;
+  object-fit: contain !important;
+  object-position: center !important;
   display: block !important;
-}
-
-/* Remove or override any media queries that attempted to change the gallery columns */
-@media (max-width: 1200px) {
-  #gallery.gallery { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
-}
-@media (max-width: 800px) {
-  #gallery.gallery { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
-}
-@media (max-width: 420px) {
-  #gallery.gallery { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
+  margin: 0 auto !important;
 }
